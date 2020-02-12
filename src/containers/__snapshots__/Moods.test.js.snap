@@ -34,7 +34,7 @@ exports[`Moods container matches a snapshot 1`] = `
     handleSelection={[Function]}
   />
   <Face
-    emoji="😠"
+    emoji="🤬"
   />
 </Fragment>
 `;
