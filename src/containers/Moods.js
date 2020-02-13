@@ -17,26 +17,27 @@ export default function Moods() {
   const [state, dispatch] = useReducer(emojiReducer, initialState);
 
   const actionsArr = [
-    { text: 'Drink Coffee', action: () => dispatch(coffee()), count: state.coffee },
+    { name: 'COFFEE', text: 'Drink Coffee', action: () => dispatch(coffee()), count: state.coffee },
     {
-      text: 'Take Nap', action: () => dispatch(nap()),
+      name: 'NAP', text: 'Take Nap', action: () => dispatch(nap()),
       count: state.nap
     },
     {
-      text: 'Eat Snack', action: () => dispatch(snack()),
+      name: 'SNACK', text: 'Eat Snack', action: () => dispatch(snack()),
       count: state.snack
     },
     {
-      text: 'Study', action: () => dispatch(study()),
+      name: 'STUDY', text: 'Study', action: () => dispatch(study()),
       count: state.study
     }
   ];
-
+  const handleSelect = (action) => action();
+  console.log(typeof(handleSelect));
   const face = getFace(state);
 
   return (
     <>
-      <Controls actionsArr={actionsArr} />
+      <Controls actionsArr={actionsArr} handleSelect={handleSelect} />
       <Face emoji={face} />
     </>
   );
