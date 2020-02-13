@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import Controls from '../components/controls/Controls';
 import Face from '../components/face/Face';
-/* */
+/* You've been provided starter code to work with
+use a reducer to manage state
+Remove the state declaration in the container
+extract code from Moods.js into the appropriate files
+create actions, selectors, and reducers*/
 
+//Move this into src/actions
 const actions = [
   { name: 'DRINK_COFFEE', text: 'Drink Coffee', stateName: 'coffees' },
   { name: 'EAT_SNACK', text: 'Snack', stateName: 'snacks' },
@@ -27,12 +32,12 @@ export const getFace = state => {
 };
 
 export default class Moods extends Component {
-  state = {
-    coffees: 0,
-    snacks: 0,
-    naps: 0,
-    studies: 0
-  }
+  // state = {
+  //   coffees: 0,
+  //   snacks: 0,
+  //   naps: 0,
+  //   studies: 0
+  // }
 
   handleSelection = name => {
     switch(name) {
