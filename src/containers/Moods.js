@@ -1,4 +1,4 @@
-import React, { Component, useReducer } from 'react';
+import React, { useReducer } from 'react';
 import Controls from '../components/controls/Controls';
 import Face from '../components/face/Face';
 import emojiReducer from '../reducers/emojiReducers';
