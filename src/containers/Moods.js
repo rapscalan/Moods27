@@ -32,7 +32,6 @@ export default function Moods() {
     }
   ];
   const handleSelect = (action) => action();
-  console.log(typeof(handleSelect));
   const face = getFace(state);
 
   return (
