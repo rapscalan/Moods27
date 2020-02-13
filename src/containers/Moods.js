@@ -4,18 +4,9 @@ import Face from '../components/face/Face';
 import emojiReducer from '../reducers/emojiReducers';
 import { getFace } from '../selectors/emojiSelectors';
 import { coffee, nap, snack, study } from '../actions/emojiActions';
-/* You've been provided starter code to work with
-use a reducer to manage state
-Remove the state declaration in the container
-extract code from Moods.js into the appropriate files
-create actions, selectors, and reducers*/
 
-//Move this into src/actions
-//selectors
-
-//export default function Moods extends Component {
 export default function Moods() {
-  // const [todos, dispatch] = React.useReducer(todoReducer, initialTodos);
+  
   const initialState =
   {
     nap: 0,
@@ -41,14 +32,7 @@ export default function Moods() {
     }
   ];
 
-  // const [{ count, number }, dispatch] = useReducer(reducer, { count: 0, number: 2 });
-
-
   const face = getFace(state);
-  // const controlActions = actions.map(action => ({
-  //   ...action,
-  //   count: this.state[action.stateName]
-  // }));
 
   return (
     <>
@@ -56,5 +40,4 @@ export default function Moods() {
       <Face emoji={face} />
     </>
   );
-
 }
